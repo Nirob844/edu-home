@@ -18,7 +18,7 @@ const Header = () => {
                             to="/"
                             aria-label="EduHome"
                             title="EduHome"
-                            class="inline-flex items-center mr-5"
+                            class="inline-flex items-center mr-8"
                         >
                             <svg
                                 class="w-8 text-teal-accent-400"
@@ -35,14 +35,14 @@ const Header = () => {
                                 <rect x="14" y="1" width="7" height="6" />
                                 <rect x="14" y="11" width="7" height="12" />
                             </svg>
-                            <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
+                            <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 ">
                                 EduHome
                             </span>
                         </NavLink>
                         <ul class="flex items-center hidden space-x-8 lg:flex">
                             <li>
                                 <NavLink
-                                    to="/"
+                                    to="/courses"
                                     aria-label="Our Courses"
                                     title="Our Courses"
                                     class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
