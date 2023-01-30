@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import { FaUser } from 'react-icons/fa';
 
 
 
@@ -7,6 +9,13 @@ import { Link, NavLink } from 'react-router-dom';
 const Header = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch((error) => console.error(error))
+    }
 
 
     return (
@@ -82,8 +91,8 @@ const Header = () => {
                             </li>
                         </ul>
                     </div>
-                    <ul class="flex items-center hidden space-x-8 lg:flex">
-                        <li>
+                    <ul class="">
+                        {/* <li>
                             <NavLink
                                 to="/login"
                                 aria-label="Log In"
@@ -102,7 +111,35 @@ const Header = () => {
                             >
                                 Register
                             </NavLink>
-                        </li>
+                        </li> */}
+                        <nav className='inline'>
+                            <div className='flex space-x-4'>
+                                <>
+                                    {
+                                        user?.uid ?
+                                            <>
+                                                <button onClick={handleLogOut} className="">Log Out</button>
+                                                <span>{user?.displayName}</span>
+                                            </>
+                                            :
+                                            <>
+                                                <Link to='/login'>Login</Link>
+                                                <Link to='/register'>Register</Link>
+                                            </>
+                                    }
+                                </>
+                                <Link to='/profile'>
+                                    {user?.photoURL ?
+                                        <img className='rounded-full h-10' src={user?.photoURL} alt="" />
+                                        : <FaUser></FaUser>
+                                    }
+                                </Link>
+                            </div>
+
+
+
+                        </nav>
+
                     </ul>
                     <div class="lg:hidden">
                         <button
