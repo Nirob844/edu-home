@@ -5,7 +5,7 @@ import Course from '../Course/Course';
 const Courses = () => {
 
     const courses = useLoaderData();
-    console.log(courses)
+    //console.log(courses)
 
     return (
         <div className='bg-slate-100 px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>

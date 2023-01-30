@@ -86,7 +86,7 @@ const Register = () => {
                             <input type="password" name="confirm" id="username" placeholder="Confirm Password" required className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" />
 
                         </div>
-                        <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-blue-600">Register</button>
+                        <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-blue-700">Register</button>
                     </form>
 
                     <p className="text-xs text-center sm:px-6 text-gray-400"> have an account?

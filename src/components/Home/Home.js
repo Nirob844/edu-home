@@ -2,6 +2,7 @@ import React from 'react';
 import banner from '../../assets/images/vladgrin190200077.webp'
 import Courses from '../Courses/Courses';
 
+
 const Home = () => {
     return (
         <div>
