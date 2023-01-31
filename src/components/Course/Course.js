@@ -6,7 +6,7 @@ const Course = ({ course }) => {
     const { id, title, url } = course;
 
     return (
-        <div className='dark:bg-gray-700 drop-shadow-2xl rounded-2xl'>
+        <div className='dark:bg-gray-800 drop-shadow-2xl rounded-2xl'>
             <div className=''>
                 <img className='h-60 w-full' src={url} alt="" />
             </div>

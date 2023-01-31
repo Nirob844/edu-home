@@ -10,8 +10,8 @@ const CourseDetails = () => {
 
         <div className='my-1 w-11/12 mx-auto'>
             <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse text-gray-100">
-                <div className='dark:bg-gray-500'>
-                    <img src={url} alt="" className="h-80 dark:bg-gray-500 aspect-video" />
+                <div className='dark:bg-gray-800'>
+                    <img src={url} alt="" className="h-80 dark:bg-gray-800 aspect-video" />
                     <p className='grid justify-items-end mr-5'>${price}</p>
                     <div className='mx-auto flex justify-center my-3'>
                         <button className="btn btn-active btn-primary mr-2">PREMIUM ACCESS</button>
@@ -23,7 +23,7 @@ const CourseDetails = () => {
                         <p>HoursRequired : {hoursRequired} h</p>
                     </div>
                 </div>
-                <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-700">
+                <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-800">
                     <span className="text-xs uppercase dark:text-gray-400">Join, it's free</span>
                     <h3 className="text-3xl font-bold">{title}</h3>
                     <p className="my-6 dark:text-gray-400">{course_description}</p>
