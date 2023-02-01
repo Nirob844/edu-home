@@ -1,10 +1,10 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const CourseDetails = () => {
     const singleCourse = useLoaderData();
-    console.log(singleCourse);
-    const { title, url, course_description, price, enrolledStudent, mainFeatures, hoursRequired, instructor_name, learnFeatures } = singleCourse
+    //console.log(singleCourse);
+    const { id, title, url, course_description, price, enrolledStudent, mainFeatures, hoursRequired, instructor_name, learnFeatures } = singleCourse
 
     return (
 
@@ -14,7 +14,9 @@ const CourseDetails = () => {
                     <img src={url} alt="" className="h-80 dark:bg-gray-800 aspect-video" />
                     <p className='grid justify-items-end mr-5'>${price}</p>
                     <div className='mx-auto flex justify-center my-3'>
-                        <button className="btn btn-active btn-primary mr-2">PREMIUM ACCESS</button>
+                        <Link to={`../courseDetails./${id}`}>
+                            <button className="btn btn-active btn-primary mr-2">PREMIUM ACCESS</button>
+                        </Link>
                         <button className="btn btn-warning">DETAILS PDF</button>
                     </div>
                     <hr />
