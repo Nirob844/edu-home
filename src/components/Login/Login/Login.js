@@ -1,7 +1,7 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { toast } from 'react-hot-toast';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const Login = () => {
@@ -11,6 +11,12 @@ const Login = () => {
     const { signIn, setLoading, providerLogin, gitProviderLogin } = useContext(AuthContext);
 
     const navigate = useNavigate();
+    const location = useLocation();
+
+
+    const from = location.state?.from?.pathname || '/';
+
+
     const googleProvider = new GoogleAuthProvider()
     const githubProvider = new GithubAuthProvider()
 
@@ -49,7 +55,7 @@ const Login = () => {
                 form.reset();
                 setError('');
                 if (user.emailVerified) {
-                    navigate('/');
+                    navigate(from, { replace: true });
                 }
                 else {
                     toast.error('Your email is not verified. Please verify your email address.')

@@ -71,7 +71,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/"
+                                    to="/blog"
                                     aria-label="Courses Blogs"
                                     title="Courses Blogs"
                                     class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -81,7 +81,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/"
+                                    to="/about"
                                     aria-label="About us"
                                     title="About us"
                                     class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -234,7 +234,7 @@ const Header = () => {
                                             </li>
                                             <li>
                                                 <NavLink
-                                                    to="/"
+                                                    to="/blog"
                                                     aria-label="Courses Blogs"
                                                     title="Courses Blogs"
                                                     class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
