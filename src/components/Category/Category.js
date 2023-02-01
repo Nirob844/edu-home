@@ -12,7 +12,7 @@ const Category = () => {
 
     return (
         <div className='bg-gray-800 mr-5 p-3 sm:block'>
-            <h4 className='my-5 font bold text-white text-2xl mr-3'>All Category: {categories.length}</h4>
+            <h4 className='my-5 font bold text-white text-2xl mr-3'>All COURSES : {categories.length}</h4>
             <hr />
             <div>
                 {

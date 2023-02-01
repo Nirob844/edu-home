@@ -5,7 +5,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 const Checkout = () => {
 
     const checkout = useLoaderData();
-    console.log(checkout)
+    //console.log(checkout)
     const { id, title, url, course_description, price } = checkout;
     const confirm = () => {
         toast.success('enroll successful')

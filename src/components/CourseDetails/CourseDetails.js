@@ -14,7 +14,7 @@ const CourseDetails = () => {
                     <img src={url} alt="" className="h-80 dark:bg-gray-800 aspect-video" />
                     <p className='grid justify-items-end mr-5'>${price}</p>
                     <div className='mx-auto flex justify-center my-3'>
-                        <Link to={`../courseDetails./${id}`}>
+                        <Link to={`../Courses/checkout/${id}`}>
                             <button className="btn btn-active btn-primary mr-2">PREMIUM ACCESS</button>
                         </Link>
                         <button className="btn btn-warning">DETAILS PDF</button>
